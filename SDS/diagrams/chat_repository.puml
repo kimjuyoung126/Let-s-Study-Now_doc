@@ -1,0 +1,16 @@
+@startuml Chat_Repository_Diagram
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam backgroundColor #FFFFFF
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #000000
+    ArrowColor #000000
+}
+
+class ChatRepository {
+    +findByRoomIdAndRoomTypeOrderBySentAtDesc(Long, ChatRoomType, Pageable) : Slice<ChatMessage>
+}
+
+@enduml

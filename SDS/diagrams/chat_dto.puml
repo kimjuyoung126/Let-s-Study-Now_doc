@@ -1,0 +1,46 @@
+@startuml Chat_DTO_Diagram
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam backgroundColor #FFFFFF
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #000000
+    ArrowColor #000000
+}
+
+class ChatMessageRequest {
+    -MessageType type
+    -ChatRoomType roomType
+    -Long roomId
+    -String message
+    -Long refId
+    --
+    +getType() : MessageType
+    +getRoomType() : ChatRoomType
+    +getRoomId() : Long
+    +getMessage() : String
+    +getRefId() : Long
+    +setType(MessageType) : void
+    +setRoomType(ChatRoomType) : void
+    +setRoomId(Long) : void
+    +setMessage(String) : void
+    +setRefId(Long) : void
+}
+
+class ChatMessageResponse {
+    -Long messageId
+    -MessageType type
+    -ChatRoomType roomType
+    -Long roomId
+    -String sender
+    -String message
+    -LocalDateTime sentAt
+    -Long refId
+    -Boolean isSolved
+    -Boolean isSelected
+    --
+    +from(ChatMessage) : ChatMessageResponse
+}
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml Session_Entity_Diagram
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam backgroundColor #FFFFFF
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #000000
+    ArrowColor #000000
+}
+
+class StudySession {
+    -Long id
+    -Member member
+    -String studyType
+    -Long roomId
+    -LocalDateTime startTime
+    -LocalDateTime endTime
+    -String mode
+    -LocalDateTime lastModeChangeTime
+    -Integer studyMinutes
+    --
+    +addStudyMinutes(int) : void
+    +endSession() : void
+    +isActive() : boolean
+}
+
+@enduml

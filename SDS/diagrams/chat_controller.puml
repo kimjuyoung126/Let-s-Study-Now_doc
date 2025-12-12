@@ -1,0 +1,33 @@
+@startuml Chat_Controller_Diagram
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam backgroundColor #FFFFFF
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #000000
+    ArrowColor #000000
+}
+
+class ChatController {
+    -SimpMessageSendingOperations messagingTemplate
+    -ChatService chatService
+    -S3Service s3Service
+    --
+    +message(ChatMessageRequest, Principal) : void
+    +solveQuestion(Long, Long, CustomUser) : ResponseEntity<String>
+    +deleteMessage(Long, CustomUser) : ResponseEntity<String>
+    +getChatHistory(Long, ChatRoomType, int, int) : ResponseEntity<List<ChatMessage>>
+    +uploadChatImage(MultipartFile) : ResponseEntity<String>
+}
+
+class ChatService {
+}
+
+class S3Service {
+}
+
+ChatController --> ChatService
+ChatController --> S3Service
+
+@enduml

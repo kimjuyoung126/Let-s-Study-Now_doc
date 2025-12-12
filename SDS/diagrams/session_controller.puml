@@ -1,0 +1,31 @@
+@startuml Session_Controller_Diagram
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam backgroundColor #FFFFFF
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #000000
+    ArrowColor #000000
+}
+
+class StudySessionController {
+    -StudySessionService studySessionService
+    -LevelUpService levelUpService
+    --
+    +startSession(CustomUser, SessionStartRequestDto) : ResponseEntity<SessionResponseDto>
+    +endSession(Long) : ResponseEntity<SessionEndResultDto>
+    +getActiveSession(CustomUser) : ResponseEntity<SessionResponseDto>
+    +getLevelInfo(CustomUser) : ResponseEntity<LevelInfoDto>
+}
+
+class StudySessionService {
+}
+
+class LevelUpService {
+}
+
+StudySessionController --> StudySessionService
+StudySessionController --> LevelUpService
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml Session_Repository_Diagram
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam backgroundColor #FFFFFF
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #000000
+    ArrowColor #000000
+}
+
+class StudySessionRepository {
+    +findByMemberIdAndEndTimeIsNull(Long) : Optional<StudySession>
+}
+
+@enduml

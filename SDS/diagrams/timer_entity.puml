@@ -1,0 +1,71 @@
+@startuml Timer_Entity_Diagram
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam backgroundColor #FFFFFF
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #000000
+    ArrowColor #000000
+}
+
+class PersonalTimer {
+    -Long id
+    -Long memberId
+    -Long roomId
+    -TimerMode timerMode
+    -TimerStatus timerStatus
+    -LocalDateTime sessionStartTime
+    -Long totalStudySeconds
+    -LocalDateTime createdAt
+    -LocalDateTime updatedAt
+    --
+    +toggleStatus() : void
+    +switchToPomodoroMode() : void
+    +switchToBasicMode() : void
+    +changePomodoroStatus(TimerStatus) : void
+    -accumulateStudyTime() : void
+    +endTimer() : void
+    +getCurrentSessionSeconds() : long
+}
+
+class PomodoroSetting {
+    -Long id
+    -Long memberId
+    -Integer studyMinutes
+    -Integer restMinutes
+    -LocalDateTime createdAt
+    -LocalDateTime updatedAt
+    --
+    +updateSetting(Integer, Integer) : void
+    -validateMinutes(Integer, Integer) : void
+    +getStudySeconds() : long
+    +getRestSeconds() : long
+}
+
+class StudyHistory {
+    -Long id
+    -Long memberId
+    -LocalDate studyDate
+    -Long totalStudySeconds
+    -LocalDateTime createdAt
+    -LocalDateTime updatedAt
+    --
+    +addStudyTime(Long) : void
+    +getFormattedTime() : String
+}
+
+enum TimerMode {
+    BASIC
+    POMODORO
+}
+
+enum TimerStatus {
+    STUDYING
+    RESTING
+}
+
+PersonalTimer --> TimerMode
+PersonalTimer --> TimerStatus
+
+@enduml

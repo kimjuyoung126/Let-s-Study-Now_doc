@@ -1,0 +1,50 @@
+@startuml Timer_Service_Diagram
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam backgroundColor #FFFFFF
+skinparam class {
+    BackgroundColor #FFFFFF
+    BorderColor #000000
+    ArrowColor #000000
+}
+
+class PersonalTimerService {
+    -PersonalTimerRepository personalTimerRepository
+    -PomodoroSettingRepository pomodoroSettingRepository
+    -StudyHistoryRepository studyHistoryRepository
+    --
+    +startTimer(Long, Long, boolean) : TimerStatusResponse
+    +endTimer(Long) : void
+    +toggleTimer(Long) : TimerStatusResponse
+    +startPomodoroMode(Long) : TimerStatusResponse
+    +stopPomodoroMode(Long) : TimerStatusResponse
+    +changePomodoroStatus(Long, TimerStatus) : TimerStatusResponse
+    +getTimerStatus(Long) : TimerStatusResponse
+    +getStudyTime(Long) : StudyTimeResponse
+    -saveToStudyHistory(Long, Long) : void
+}
+
+class PomodoroSettingService {
+    -PomodoroSettingRepository pomodoroSettingRepository
+    --
+    +saveSetting(Long, PomodoroSettingRequest) : PomodoroSettingResponse
+    +getSetting(Long) : PomodoroSettingResponse
+    +hasSettings(Long) : boolean
+}
+
+class PersonalTimerRepository {
+}
+
+class PomodoroSettingRepository {
+}
+
+class StudyHistoryRepository {
+}
+
+PersonalTimerService --> PersonalTimerRepository
+PersonalTimerService --> PomodoroSettingRepository
+PersonalTimerService --> StudyHistoryRepository
+PomodoroSettingService --> PomodoroSettingRepository
+
+@enduml
