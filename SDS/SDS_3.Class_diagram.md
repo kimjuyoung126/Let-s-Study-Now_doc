@@ -6,7 +6,7 @@
 
 ## DB Class Diagram
 
-<img width="2000" height="2000" alt="Image" src="https://github.com/user-attachments/assets/7e183265-b62a-4f16-bcec-483516c00d01" />
+<img width="2000" height="2000" alt="Image" src="images/ClassDiagram_1.png" />
 
 ### MemberRepository
 
@@ -93,7 +93,7 @@
 
 ## 3.2 DTO Class diagram
 
-<img width="2342" height="1134" alt="Image" src="https://github.com/user-attachments/assets/786f4a79-55a2-4ff8-9566-96018425e3b5" />
+<img width="2342" height="1134" alt="Image" src="images/ClassDiagram_2.png" />
 
 ### RegisterDto
 
@@ -206,7 +206,7 @@
 
 ## 3.3 인증/보안 Class diagram
 
-<img width="3860" height="1836" alt="Image" src="https://github.com/user-attachments/assets/e15940c9-14c0-4161-b41b-770dca4ffe2f" />
+<img width="3860" height="1836" alt="Image" src="images/ClassDiagram_3.png" />
 
 ### CustomUser
 
@@ -305,7 +305,7 @@
 
 ## 3.4 오픈 스터디 기능 Class diagram
 
-<img width="9110" height="2870" alt="Image" src="https://github.com/user-attachments/assets/fdc1dd7f-5cc3-4db0-b2d6-bd5e02b4a5a9" />
+<img width="9110" height="2870" alt="Image" src="images/ClassDiagram_4.png" />
 
 ### OpenStudyRoomController
 
@@ -467,7 +467,7 @@
 
 ### 3.5.1 Domain
 
-<img width="1360" height="2680" alt="Image" src="https://github.com/user-attachments/assets/4eec5306-15c1-40bf-a6cb-7f503d9bb466" />
+<img width="1360" height="2680" alt="Image" src="images/ClassDiagram_5.png" />
 
 #### Group (Entity)
 
@@ -553,7 +553,7 @@
 
 ### 3.5.2 DTO
 
-<img width="3600" height="7000" alt="Image" src="https://github.com/user-attachments/assets/157b953e-8654-4597-983f-d74366e522e1" />
+<img width="3600" height="7000" alt="Image" src="images/ClassDiagram_6.png" />
 
 #### AddGroupMemberRequest
 
@@ -619,7 +619,7 @@
 
 ### 3.5.3 Services
 
-<img width="6042" height="828" alt="Image" src="https://github.com/user-attachments/assets/3273d3c3-9e91-451c-b00c-164101a80967" />
+<img width="6042" height="828" alt="Image" src="images/ClassDiagram_7.png" />
 
 #### GroupService
 
@@ -662,7 +662,7 @@
 
 ### 3.5.4 Controllers
 
-<img width="4706" height="786" alt="Image" src="https://github.com/user-attachments/assets/e1a70990-dfdf-428e-a3ce-6ac79fde0552" />
+<img width="4706" height="786" alt="Image" src="images/ClassDiagram_8.png" />
 
 #### GroupController
 
@@ -698,7 +698,7 @@
 
 ### 3.5.5 Repositories
 
-<img width="5868" height="702" alt="Image" src="https://github.com/user-attachments/assets/1dcabdd5-d3fd-4839-aa19-975c07ff3082" />
+<img width="5868" height="702" alt="Image" src="images/ClassDiagram_9.png" />
 
 #### GroupRepository
 
@@ -737,7 +737,7 @@
 
 ## 3.6 체크리스트 Class diagram
 
-<img width="4823" height="2772" alt="Image" src="https://github.com/user-attachments/assets/a1f6866e-22cd-4793-ac3b-992b3add7019" />
+<img width="4823" height="2772" alt="Image" src="images/ClassDiagram_10.png" />
 
 **Description:** 체크리스트 도메인의 구조와 주요 동작을 한눈에 정리한다.
 
